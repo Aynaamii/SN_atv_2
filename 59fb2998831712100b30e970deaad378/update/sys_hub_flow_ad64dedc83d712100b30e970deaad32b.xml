@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=4606000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Manager Approvals/reprovalls refund request from the your users</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>approvalsreprovalls_manager</internal_name>
+        <label_cache>[{"name":"d7c5783f-b42d-4056-be55-d934c65d8e9e.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"35609f6b-daf2-4549-b439-6fb5aa2b9dc3":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.opened_by.manager","label":"Trigger - Record Created➛Refund Requeste Record➛Opened by➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","usedInstances":{"d7c5783f-b42d-4056-be55-d934c65d8e9e":["approval_conditions"]}},{"name":"3beca69e-4ab6-49ae-a58c-b213e7e9463d.record","label":"1 - Update Record➛Refund Requeste Record","reference":"x_1593193_refund_refund_requeste","reference_display":"Refund Requeste","type":"reference","base_type":"reference","usedInstances":{"c746da71-742c-4426-99e1-12bee89d07fe":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Refund Requeste Record","reference":"x_1593193_refund_refund_requeste","reference_display":"Refund Requeste","type":"reference","base_type":"reference","usedInstances":{"3beca69e-4ab6-49ae-a58c-b213e7e9463d":["record"],"d7c5783f-b42d-4056-be55-d934c65d8e9e":["record"],"2ade1859-1cb9-497b-ac75-ab1fea60ffaa":["record"],"935f1ad2-9f25-4958-8dac-0bcb690d8f97":["record"]},"attributes":{}}]</label_cache>
+        <master_snapshot>5c442294835b12100b30e970deaad3de</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Approvals/reprovalls Manager</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>60446294835b12100b30e970deaad336</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 19:29:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ad64dedc83d712100b30e970deaad32b</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Approvals/reprovalls Manager</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Refund Request" source="x_1593193_refund">59fb2998831712100b30e970deaad378</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_update_name>sys_hub_flow_ad64dedc83d712100b30e970deaad32b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:46:32</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=ad64dedc83d712100b30e970deaad32b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=ad64dedc83d712100b30e970deaad32b"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1593193_refund_refund_requeste">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>60446294835b12100b30e970deaad336</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:39:02</sys_updated_on>
+        <table>x_1593193_refund_refund_requeste</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>ad64dedc83d712100b30e970deaad32b</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:46:32</sys_created_on>
+        <sys_id>e2f56e18835b12100b30e970deaad380</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:46:32</sys_updated_on>
+        <trigger display_value="">60446294835b12100b30e970deaad336</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=ad64dedc83d712100b30e970deaad32b^sys_idNOT INe2f56e18835b12100b30e970deaad380"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=ad64dedc83d712100b30e970deaad32b"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=ad64dedc83d712100b30e970deaad32b^sys_idNOT IN6964dedc83d712100b30e970deaad32e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>ad64dedc83d712100b30e970deaad32b</id>
+        <name>Approvals/reprovalls Manager</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 19:29:44</sys_created_on>
+        <sys_id>6964dedc83d712100b30e970deaad32e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 19:29:44</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=6964dedc83d712100b30e970deaad32e"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=ad64dedc83d712100b30e970deaad32b^sys_idNOT IN280b5658831b12100b30e970deaad3a8,6c0b5658831b12100b30e970deaad3ad"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Approvals/reprovalls Manager">ad64dedc83d712100b30e970deaad32b</model>
+        <model_id>ad64dedc83d712100b30e970deaad32b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_ad64dedc83d712100b30e970deaad32b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 19:58:37</sys_created_on>
+        <sys_id>280b5658831b12100b30e970deaad3a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 19:58:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=280b5658831b12100b30e970deaad3a8"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Approvals/reprovalls Manager">ad64dedc83d712100b30e970deaad32b</model>
+        <model_id>ad64dedc83d712100b30e970deaad32b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_ad64dedc83d712100b30e970deaad32b</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 19:58:37</sys_created_on>
+        <sys_id>6c0b5658831b12100b30e970deaad3ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 19:58:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6c0b5658831b12100b30e970deaad3ad"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=ad64dedc83d712100b30e970deaad32b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ad64dedc83d712100b30e970deaad32b"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=ad64dedc83d712100b30e970deaad32b^sys_idNOT INa80bde58831b12100b30e970deaad388"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">ad64dedc83d712100b30e970deaad32b</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 19:58:37</sys_created_on>
+        <sys_id>a80bde58831b12100b30e970deaad388</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:23:09</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY2U7jSBT9FctP01JG8pIQzFs30BqknkYT6JkHxFhl+1ZSmko5bZcN6Rb/Pre8xI6XkI0GXkCu7Z576tylcvdT58QDrp/pt8TjoA90JiREgvDb5QJwWKphV5C5mpsTERAZRkv9TEYJDPQwCiDSz8yBnhKewM0yvgpwEy7NdhTb9WIavx9dc+TYpmO7EdBEBNW/7wnEUi0NWLzgZPl3sWOSLdAm1QJ/xngQgdDP7u4H+oJEaEoqGD8bU0xh8alPHAsM3zZtyzIM63Roeie2Z1qBTcAw8MAmBQ3ssoOJynF4lCACQFOU8Bg6SIqABNeCL1crZshxztKcPMbsB55+aqh1FBC7D/nc6tMtGMmH/VnIfLheSBaKfCTHmU+GPJmLrzl+xSVQknBZcokjSYznwUJBViAKRPRmFj5MSoOfmci8KyZ56BO++iJSRsxLJMSKcMo4Uu/m3MRhEmXoJ5fn15ML95+Pt+d/XE7cyeXN7eTq/PbyQn/K/HK/J+rEHGGBxc3deVoJ4DMDri5QJHMP0Qz02I/YQn70JUuhgPM0qAR8HoqAZay0ROyXU/G6iAuXyss0jF4d+7XDSy3/e/lXW6754G4SPTkhJADSI1GP1iRad7IDmuzwt+7dJrEWI9uodWgYr6TXPKL2lus8DIBfVMfpODmdooCZWCRSsfVAhIxdGbokCNwaj2opYnpOv7lvT8+KNUoEbnBX99GWbEbbir8vLEa4dxhwJTfZkThPvxRHThKhhXhx+EfzkwipkVqZwujVnEwLRukNcPBlTQT0W1z/+pPFMRPTGuqV0YyDls2VORSTVrqU244PNH6/Z7y2+U0bvDXiduegNU1KPaCWMVYhaxq2R01jbIwIDWzD8K1a0LbB9KKUjdt/keDdLXTjTHd8C5U1KS7AG3Xhb6WYdF1uJQlKDUWGOD8ONPNI0CwFrZHp7J1S3UqW+fBFowna4NqRKzoJUoI7gm0z3pbJjvLwAbPsHonOI/5/0yjEJrCZedSZGhNatUL7reDvwxGTHg0j2AxgfcUrpbuK4VKjRCyPkOhsanoODMHA/GZjavNGjuP5xKJ0fDIGy2wkugpGJ7Z3keCeEVbapcy+ZNepkbRLWjukuQMAtlLezgAPT3aFMDtTXT73PpLawwyEi1Ajl6u01cptU84CKOf2DuyWlbQK5UODm546/sgcj/0xPjswuOkQPGIOrRFxxif26agR3C0om2DKDhJ+yWMkXsYZkJ7A/5ZPva2H9EsqNAYpVZHZvfYK7E6zPSQ3Uqt/6lq0LH+EkfY1FL9fVeu0G8Cylr1Ij1WEt0GhLlZ7WRheKGetLgBNf8LxNdOqe+xh5TXfRA09pOtuHfwmguHpyKF2dzahTlc2qcD0w3zzTcOWwZD2hlVX97CtttPOEOkt93uotSGTeh+woVE5Finm0UmxXo4U++DmqIzF3ofgPmDfUbXKWohDSpayCW5I63n6ItRwQkMjGqNa8asfvuu9pSZngJRy7ILRoKasH5qg6wWjDWWl4F8LJO+rW4ULh7WiV3rVmtS49eM+YSEYk9HI7ulyneYTtgvQM3jffIXaOQDSrnjaWKZ2O7d5ZmehqqlzXRFblqCjet1dhw7zurMSPef14TVm0wO8A8UbrR73/wNlc8KSvx4AAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=ad64dedc83d712100b30e970deaad32b^sys_idNOT IN08a06250835b12100b30e970deaad3d6,0ca06250835b12100b30e970deaad3d0,88a06250835b12100b30e970deaad3d2,c0a06250835b12100b30e970deaad3d5"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">ad64dedc83d712100b30e970deaad32b</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>2b572c12-a9df-4433-b46a-73f766319ed4</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:23:09</sys_created_on>
+        <sys_id>08a06250835b12100b30e970deaad3d6</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:47:30</sys_updated_on>
+        <ui_id>935f1ad2-9f25-4958-8dac-0bcb690d8f97</ui_id>
+        <values>H4sIAAAAAAAA/+VVXWviQBT9KzLPEhKjor4tirDQbcEuvnRLmGRu6sBkks6H1RX/+94kkxi0tBb6IutLuF8z5xzPTZ4OhDMyI0NgfjANxkkYhOHA9weTYRCPwzgYsJACBKRPJM0AOxUkuWIYb6mwZeJwmCugBlgUeIlVCqQ5HrHOuC4E3a9dG2aSDRcM62T29NwnBVV4ogFFZoez0rWQBI1BYOuqwXSO0eyLMmZ5YjPEFfEmeecmF67S+7nACg6VcAK/T2BnQDJAICkVGvoko5JRk6s9mRllMYGk2YMU+7Zjw6WpiWZ0p/lfvHnol30pILPEidCGkROoTqcLaugjnpwYq1q9cp6ArjVhkFIrzLybqxseCsNzWY8YGotmOhc2k/e1IqQ9oPN/WI0goCh5lshrWunjJn9bNSCXXFaSOIoiT6hoI2qM4rE1JZwDAQGVxhktCi5fokLlW14NI5TMexEYeKnI3/BOzV+kR5MSt4eqUm+J+UWVXlPFSxK/8BgcPvaJ3uu5oFqfqKCG0astkdTEHIWoUqGSIKqcUA4nihfmB161BQf82Hemj0cfOSyZngzVOfNk/F0UjKZhMA0jxGMlOz1eLWgDlzuwqhp6q1PD11biCsDNSvyujPA+AbcVF7m77mzvvi64nRh9205MbmknHI2bX4rPVsEffPiy7Tipcr/urIE2+PL/Y30/ZJNLy59Vv+b3K1A1fl9yEEy/A7MxO2QIy0BUwz4zvCv21q7Yfgi+zfXB2K9+N+T9/+Z78PwPPqAqIgYJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">ad64dedc83d712100b30e970deaad32b</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:23:09</sys_created_on>
+        <sys_id>0ca06250835b12100b30e970deaad3d0</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:47:30</sys_updated_on>
+        <ui_id>3beca69e-4ab6-49ae-a58c-b213e7e9463d</ui_id>
+        <values>H4sIAAAAAAAA/+VVXWviQBT9KzLPEhKjor4tirDQbcEuvnRLmGRu6sBkks6H1RX/+94kkxi0tBb6IutLuF8z5xzPTZ4OhDMyI0NgfjANxkkYhOHA9weTYRCPwzgYsJACBKRPJM0AOxUkuWIYb6mwZeJwmCugBlgUeIlVCqQ5HrHOuC4E3a9dG2aSDRcM62T29NwnBVV4ogFFZoez0rWQBI1BYOuqwXSO0eyLMmZ5YjPEFfEmeecmF67S+7nACg6VcAK/T2BnQDJAICkVGvoko5JRk6s9mRllMYGk2YMU+7Zjw6WpiWZ0p/lfvHnol30pILPEidCGkROoTqcLaugjnpwYq1q9cp6ArjVhkFIrzLybqxseCsNzWY8YGotmOhc2k/e1IqQ9oPN/WI0goCh5lshrWunjJn9bNSCXXFaSOIoiT6hoI2qM4rE1JZwDAQGVxhktCi5fokLlW14NI5TMexEYeKnI3/BOzV+kR5MSt4eqUm+J+UWVXlPFSxK/8BgcPvaJ3uu5oFqfqKCG0astkdTEHIWoUqGSIKqcUA4nihfmB161BQf82Hemj0cfOSyZngzVOfNk/F0UjKZhMA0jxGMlOz1eLWgDlzuwqhp6q1PD11biCsDNSvyujPA+AbcVF7m77mzvvi64nRh9205MbmknHI2bX4rPVsEffPiy7Tipcr/urIE2+PL/Y30/ZJNLy59Vv+b3K1A1fl9yEEy/A7MxO2QIy0BUwz4zvCv21q7Yfgi+zfXB2K9+N+T9/+Z78PwPPqAqIgYJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">ad64dedc83d712100b30e970deaad32b</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:23:09</sys_created_on>
+        <sys_id>88a06250835b12100b30e970deaad3d2</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:47:30</sys_updated_on>
+        <ui_id>d7c5783f-b42d-4056-be55-d934c65d8e9e</ui_id>
+        <values>H4sIAAAAAAAA/+1X33MaNxD+VzR6dJjzYewa6BNj6mk7bTwDaV5M5kan04EyQnfRD8eU4X/vSqc7LmATSPziJk+g1e7q29X3seh+jXmGh/i6n1+wweAiTrtx3Ivj/hWN+z2W9q5/ue4RGuMOlmTJwFMxWqgM1g9EWGdYr28UI4ZlSTeiVikmzWYD+xnXpSCr98ENLHTBRQb7eHj/oYNLoiCjYQoP1ztbx0ISJGUCXCc1pl2MZlW6dVZQuwRcCa+Nf4XIcdhBf4xhB4IcnLiD2aNhMmOAIydCsw5eEpkRU6gVHhplwQA1Z3dSrBqPBZemqnNJHjX/Fw7uXTi/nEFhNPSgWSahP5U5HxNDppCZGquadhWcMl21JGM5scLctG2Vw11peCGrEENSUUcXwi7l26ohuEnQug6rAQQrXZ0OeVVWPl0Unyc1yFsufUdCiaKgRDQrYoziqTUOzhozwXyLl6QsuZwnpSoeuA8GKMtoLmAR5aL4DGdqPpcRoQ53BF0l0S3Yx978nijuivgb0kDwpoP1St8IovW2FOhh8sk6JFVhoYTEd6FqgYujipdmBKc8sIB50wl0T+lBbtEtlap0W7Y/Jt2rQa876CWAwsps+/HJMm3YPvEn3gFNtg6n6eAIrLUO3gWwO9iDCvwy8XtfisCHobfVRtBA97AGgmUrgoo9T2igH78iDYSyXr0Ivsb/uHuIU1l/yyFAADUQkeScifbPfr2xT/jWzmlMPwJVzfRROAPdBljPwQ3c98unuO/jd7h/cSL3nx8A/Th+TfT/kUYAPUg21tty6mNhlTyggGTBtWfGs0poeZymiCNA1or4s0K5K4hd8N+ih95PPfz/9XB5dZBqrb8VDatpITPuEOuWKqpfZqYn7COjRo/k6p/7J54IUQEQwZCuIqASmTO12XzYV9B3ZjtNbUe0oHlxWMH011oStNZsqhDU1lszyOqMQXOXL/UGeWWS+1H+gdGDXMsHW25lFhpETPsRsp7hCvYMD2dYFpLNcGeGnVfiyOXN4AHgmg1vW683m8piFQkJuq3lNjojK+09NV2wDLjprV9YEi+GYH+JF/8RPan1N7YMjaum7Lcp6K7BWfWF7826aXDwmc7f8fbMu3qxmXf5U37fKz+AyZPmWQEDDX79Xk6TtdHhb1gE3w+64vOzmTw7G1G4CI0c8vORLwW5UpDVUD0yC4byLPGWInUTLEJTnwAtrTZIMbhoiQjywo6Qy3jn+IekXabwwTUq8lwzg9IVetNFXKLflCoU+h2oKNwRU1Y10IN5IFz4t3zh6aBRoBeyJQArFUB1MTMczTAiOSixhufC2SNZloINAY1CelEoA5dB0cyCGLPaMYLbnsN8bSavd3S36euCU391uUJlTRZnPMcbmMr/ATXSEdlyFAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">ad64dedc83d712100b30e970deaad32b</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>35609f6b-daf2-4549-b439-6fb5aa2b9dc3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:23:09</sys_created_on>
+        <sys_id>c0a06250835b12100b30e970deaad3d5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:47:30</sys_updated_on>
+        <ui_id>2ade1859-1cb9-497b-ac75-ab1fea60ffaa</ui_id>
+        <values>H4sIAAAAAAAA/+VVXWviQBT9KzLPISRGpfq2KMJCtwW7+NItYZy50YHJR+fD6or/fW+SSQxaWgt9kfUl3K+Zc47nJs8HIjiZkAHwIByHIxaFUdQPgv7dIFyNolXY5xEFCIlHMpoCdipgueIYb6m0ZeJwmCqgBngc+swqBZk5HrHOhS4k3S9dG2bYRkiOdTJ5fvFIQRWeaECRyeGsdC0kSVcgsXXRYDrHaPZFGfOc2RRxxaJJ3rvJmav0fs6wgkMlnDDwCOwMZBwQSEKlBo+kNOPU5GpPJkZZTCBp/pjJfduxEZmpiaZ0p8VfvHkQlH0JIDPmRGjD2AlUp5MZNfQJT2bGqlavXDDQtSYcEmqlmXZzdcNjYUSe1SOGrmQznUubZg+1IqQ9oPN/WI0goCh5lshrWsnTJn9bNCDnIqskcRRlzqhsI2qMEitrSjgHAhIqjVNaFCJbx4XKt6IaRiipv5YY+InM3/BOLdaZT1mJ20dVqT/H/KxKL6kSJYlfeAwOHz2i93oqqdYnKqhh/GpLJDUxRyGuVKgkiCsnlMNMicL8wKu24IAfPWf61fAjh7HxyVCdM0/G38XhcByF4yhGPDbjp8erBW3gcgcWVUNvcWr42kpcAbhZid+VEd4n4LbiInffne091AW3E8Nv24m7W9oJR+Pml+KzVQj6H75sO06q3K87a6ANvvz/2CCI+ODS8mfVr/n9ClSN3+cCJNfvwGzMDinCMhDXsM8M74q9pSu2H4Jvc304CqrfDXn/v/kevPwDBQyLPAYJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=ad64dedc83d712100b30e970deaad32b"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=ad64dedc83d712100b30e970deaad32b^sys_idNOT IN4af56e18835b12100b30e970deaad301,80a06250835b12100b30e970deaad3d6,cca06250835b12100b30e970deaad3d3"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">0ef56e18835b12100b30e970deaad300</block>
+        <comment/>
+        <connected_to>35609f6b-daf2-4549-b439-6fb5aa2b9dc3</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">ad64dedc83d712100b30e970deaad32b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:46:30</sys_created_on>
+        <sys_id>4af56e18835b12100b30e970deaad301</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:46:30</sys_updated_on>
+        <ui_id>2b572c12-a9df-4433-b46a-73f766319ed4</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">88a06250835b12100b30e970deaad3d5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">ad64dedc83d712100b30e970deaad32b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>35609f6b-daf2-4549-b439-6fb5aa2b9dc3</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:23:09</sys_created_on>
+        <sys_id>80a06250835b12100b30e970deaad3d6</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:46:30</sys_updated_on>
+        <ui_id>2d286ce9-1521-42fb-b25a-3f317f564ac5</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">40a06250835b12100b30e970deaad3d3</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">ad64dedc83d712100b30e970deaad32b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:23:09</sys_created_on>
+        <sys_id>cca06250835b12100b30e970deaad3d3</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:46:30</sys_updated_on>
+        <ui_id>35609f6b-daf2-4549-b439-6fb5aa2b9dc3</ui_id>
+        <values>H4sIAAAAAAAA/+1UTW/bMAz9K4POjiHbcZrkVmwoMGBbgbXoZSsMWaITbbLkSXLTzMh/H+WPNlhSbBh63M18lMj3qEd3xLS+ab27NZfOyY0m6y/3EZE6YPjdEc1qIGvCjRbSS6OLHojIA1NtSFhorMEAISFdo9j+7jTDt1IJC2P1hlms4cGSdfdbyu8bKBQrQWGBG2+l3uB1KTCqKKuSFU94li6ylNJ0OU/KRVYmqcgYsAzPTRffTmTffOiR6EUVoR/ibupkrAi0EhoRePSgBWDriikHEamZFswbu39CLDBxrdUzsJXaYzkSDj86+RNrp3keDlaAGjkMyaewGEc2wHxrJIfrJhAcEM9KNd7hRrW1/jToCMOGirXKT8NGpHVYD5pAOrAYKVU3W7P7PDW8kroXOCaV4fg+U8Q8jqFsPbjwMKCgxkJFzZoGh1OEx5T9ZeRSxxuFQVwps8OmwTkx44F4jDNi8RXi73r4jlkZVHzEMnh5oFkyJ3nRuwzLeYsSDv1Yih9tIDQIHKUUwzTwgONWNv4S+zzAyPoQnVr0yJ1dJy54frHMqlk5T8VsTvPFrIQ8n4lVNueLXCxhBTFy661aOM88HA5fW0ozdOU34B4dcGLt1yr7GnuxYnmVJzQ/vxfzxbm9OLMRLy9D+odlCM/3l7tAKf2/DMfLIF0xmHrU1jf/5124D8YfOrjBNwK4dEjkNmDvp796SOzRAJIfQztjvwcJz9jhFwiEtU8fBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=ad64dedc83d712100b30e970deaad32b"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=ad64dedc83d712100b30e970deaad32b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_ad64dedc83d712100b30e970deaad32b^sys_idNOT IN600b5658831b12100b30e970deaad3b0,6c0b5658831b12100b30e970deaad3ac"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ad64dedc83d712100b30e970deaad32b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 19:58:37</sys_created_on>
+        <sys_id>600b5658831b12100b30e970deaad3b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Refund Request" source="x_1593193_refund">59fb2998831712100b30e970deaad378</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 19:58:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ad64dedc83d712100b30e970deaad32b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 19:58:37</sys_created_on>
+        <sys_id>6c0b5658831b12100b30e970deaad3ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Refund Request" source="x_1593193_refund">59fb2998831712100b30e970deaad378</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 19:58:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_ad64dedc83d712100b30e970deaad32b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_ad64dedc83d712100b30e970deaad32b"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_ad64dedc83d712100b30e970deaad32b"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Manager Approvals/reprovalls refund request from the your users</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>approvalsreprovalls_manager</internal_name>
+        <label_cache>[{"name":"d7c5783f-b42d-4056-be55-d934c65d8e9e.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"35609f6b-daf2-4549-b439-6fb5aa2b9dc3":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.opened_by.manager","label":"Trigger - Record Created➛Refund Requeste Record➛Opened by➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","usedInstances":{"d7c5783f-b42d-4056-be55-d934c65d8e9e":["approval_conditions"]}},{"name":"3beca69e-4ab6-49ae-a58c-b213e7e9463d.record","label":"1 - Update Record➛Refund Requeste Record","reference":"x_1593193_refund_refund_requeste","reference_display":"Refund Requeste","type":"reference","base_type":"reference","usedInstances":{"c746da71-742c-4426-99e1-12bee89d07fe":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Refund Requeste Record","reference":"x_1593193_refund_refund_requeste","reference_display":"Refund Requeste","type":"reference","base_type":"reference","usedInstances":{"3beca69e-4ab6-49ae-a58c-b213e7e9463d":["record"],"d7c5783f-b42d-4056-be55-d934c65d8e9e":["record"],"2ade1859-1cb9-497b-ac75-ab1fea60ffaa":["record"],"935f1ad2-9f25-4958-8dac-0bcb690d8f97":["record"]},"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Approvals/reprovalls Manager</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Approvals/reprovalls Manager">ad64dedc83d712100b30e970deaad32b</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5c442294835b12100b30e970deaad3de</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:46:31</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=5c442294835b12100b30e970deaad3de"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5c442294835b12100b30e970deaad3de"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=5c442294835b12100b30e970deaad3de"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=5c442294835b12100b30e970deaad3de^sys_idNOT IN90442294835b12100b30e970deaad3f9"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>5c442294835b12100b30e970deaad3de</id>
+        <name>Approvals/reprovalls Manager</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:01</sys_created_on>
+        <sys_id>90442294835b12100b30e970deaad3f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:39:01</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=90442294835b12100b30e970deaad3f9"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=5c442294835b12100b30e970deaad3de^sys_idNOT IN18446294835b12100b30e970deaad307,d4442294835b12100b30e970deaad3fa"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Approvals/reprovalls Manager">5c442294835b12100b30e970deaad3de</model>
+        <model_id>5c442294835b12100b30e970deaad3de</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5c442294835b12100b30e970deaad3de</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:01</sys_created_on>
+        <sys_id>18446294835b12100b30e970deaad307</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:46:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=18446294835b12100b30e970deaad307"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Approvals/reprovalls Manager">5c442294835b12100b30e970deaad3de</model>
+        <model_id>5c442294835b12100b30e970deaad3de</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5c442294835b12100b30e970deaad3de</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:01</sys_created_on>
+        <sys_id>d4442294835b12100b30e970deaad3fa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:46:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d4442294835b12100b30e970deaad3fa"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=5c442294835b12100b30e970deaad3de"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5c442294835b12100b30e970deaad3de"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=5c442294835b12100b30e970deaad3de^sys_idNOT IN6c446294835b12100b30e970deaad324"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">5c442294835b12100b30e970deaad3de</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:01</sys_created_on>
+        <sys_id>6c446294835b12100b30e970deaad324</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:39:01</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY2U7jSBT9FctP01JG8pIQzFs30BqknkYT6JkHxFhl+1ZSmko5bZcN6Rb/Pre8xI6XkI0GXkCu7Z576tylcvdT58QDrp/pt8TjoA90JiREgvDb5QJwWKphV5C5mpsTERAZRkv9TEYJDPQwCiDSz8yBnhKewM0yvgpwEy7NdhTb9WIavx9dc+TYpmO7EdBEBNW/7wnEUi0NWLzgZPl3sWOSLdAm1QJ/xngQgdDP7u4H+oJEaEoqGD8bU0xh8alPHAsM3zZtyzIM63Roeie2Z1qBTcAw8MAmBQ3ssoOJynF4lCACQFOU8Bg6SIqABNeCL1crZshxztKcPMbsB55+aqh1FBC7D/nc6tMtGMmH/VnIfLheSBaKfCTHmU+GPJmLrzl+xSVQknBZcokjSYznwUJBViAKRPRmFj5MSoOfmci8KyZ56BO++iJSRsxLJMSKcMo4Uu/m3MRhEmXoJ5fn15ML95+Pt+d/XE7cyeXN7eTq/PbyQn/K/HK/J+rEHGGBxc3deVoJ4DMDri5QJHMP0Qz02I/YQn70JUuhgPM0qAR8HoqAZay0ROyXU/G6iAuXyss0jF4d+7XDSy3/e/lXW6754G4SPTkhJADSI1GP1iRad7IDmuzwt+7dJrEWI9uodWgYr6TXPKL2lus8DIBfVMfpODmdooCZWCRSsfVAhIxdGbokCNwaj2opYnpOv7lvT8+KNUoEbnBX99GWbEbbir8vLEa4dxhwJTfZkThPvxRHThKhhXhx+EfzkwipkVqZwujVnEwLRukNcPBlTQT0W1z/+pPFMRPTGuqV0YyDls2VORSTVrqU244PNH6/Z7y2+U0bvDXiduegNU1KPaCWMVYhaxq2R01jbIwIDWzD8K1a0LbB9KKUjdt/keDdLXTjTHd8C5U1KS7AG3Xhb6WYdF1uJQlKDUWGOD8ONPNI0CwFrZHp7J1S3UqW+fBFowna4NqRKzoJUoI7gm0z3pbJjvLwAbPsHonOI/5/0yjEJrCZedSZGhNatUL7reDvwxGTHg0j2AxgfcUrpbuK4VKjRCyPkOhsanoODMHA/GZjavNGjuP5xKJ0fDIGy2wkugpGJ7Z3keCeEVbapcy+ZNepkbRLWjukuQMAtlLezgAPT3aFMDtTXT73PpLawwyEi1Ajl6u01cptU84CKOf2DuyWlbQK5UODm546/sgcj/0xPjswuOkQPGIOrRFxxif26agR3C0om2DKDhJ+yWMkXsYZkJ7A/5ZPva2H9EsqNAYpVZHZvfYK7E6zPSQ3Uqt/6lq0LH+EkfY1FL9fVeu0G8Cylr1Ij1WEt0GhLlZ7WRheKGetLgBNf8LxNdOqe+xh5TXfRA09pOtuHfwmguHpyKF2dzahTlc2qcD0w3zzTcOWwZD2hlVX97CtttPOEOkt93uotSGTeh+woVE5Finm0UmxXo4U++DmqIzF3ofgPmDfUbXKWohDSpayCW5I63n6ItRwQkMjGqNa8asfvuu9pSZngJRy7ILRoKasH5qg6wWjDWWl4F8LJO+rW4ULh7WiV3rVmtS49eM+YSEYk9HI7ulyneYTtgvQM3jffIXaOQDSrnjaWKZ2O7d5ZmehqqlzXRFblqCjet1dhw7zurMSPef14TVm0wO8A8UbrR73/wNlc8KSvx4AAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=5c442294835b12100b30e970deaad3de^sys_idNOT INa4446294835b12100b30e970deaad323,a4446294835b12100b30e970deaad324,a8446294835b12100b30e970deaad321,ac446294835b12100b30e970deaad323"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">5c442294835b12100b30e970deaad3de</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:01</sys_created_on>
+        <sys_id>a4446294835b12100b30e970deaad323</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:39:01</sys_updated_on>
+        <ui_id>d7c5783f-b42d-4056-be55-d934c65d8e9e</ui_id>
+        <values>H4sIAAAAAAAA/+1X33MaNxD+VzR6dJjzYewa6BNj6mk7bTwDaV5M5kan04EyQnfRD8eU4X/vSqc7LmATSPziJk+g1e7q29X3seh+jXmGh/i6n1+wweAiTrtx3Ivj/hWN+z2W9q5/ue4RGuMOlmTJwFMxWqgM1g9EWGdYr28UI4ZlSTeiVikmzWYD+xnXpSCr98ENLHTBRQb7eHj/oYNLoiCjYQoP1ztbx0ISJGUCXCc1pl2MZlW6dVZQuwRcCa+Nf4XIcdhBf4xhB4IcnLiD2aNhMmOAIydCsw5eEpkRU6gVHhplwQA1Z3dSrBqPBZemqnNJHjX/Fw7uXTi/nEFhNPSgWSahP5U5HxNDppCZGquadhWcMl21JGM5scLctG2Vw11peCGrEENSUUcXwi7l26ohuEnQug6rAQQrXZ0OeVVWPl0Unyc1yFsufUdCiaKgRDQrYoziqTUOzhozwXyLl6QsuZwnpSoeuA8GKMtoLmAR5aL4DGdqPpcRoQ53BF0l0S3Yx978nijuivgb0kDwpoP1St8IovW2FOhh8sk6JFVhoYTEd6FqgYujipdmBKc8sIB50wl0T+lBbtEtlap0W7Y/Jt2rQa876CWAwsps+/HJMm3YPvEn3gFNtg6n6eAIrLUO3gWwO9iDCvwy8XtfisCHobfVRtBA97AGgmUrgoo9T2igH78iDYSyXr0Ivsb/uHuIU1l/yyFAADUQkeScifbPfr2xT/jWzmlMPwJVzfRROAPdBljPwQ3c98unuO/jd7h/cSL3nx8A/Th+TfT/kUYAPUg21tty6mNhlTyggGTBtWfGs0poeZymiCNA1or4s0K5K4hd8N+ih95PPfz/9XB5dZBqrb8VDatpITPuEOuWKqpfZqYn7COjRo/k6p/7J54IUQEQwZCuIqASmTO12XzYV9B3ZjtNbUe0oHlxWMH011oStNZsqhDU1lszyOqMQXOXL/UGeWWS+1H+gdGDXMsHW25lFhpETPsRsp7hCvYMD2dYFpLNcGeGnVfiyOXN4AHgmg1vW683m8piFQkJuq3lNjojK+09NV2wDLjprV9YEi+GYH+JF/8RPan1N7YMjaum7Lcp6K7BWfWF7826aXDwmc7f8fbMu3qxmXf5U37fKz+AyZPmWQEDDX79Xk6TtdHhb1gE3w+64vOzmTw7G1G4CI0c8vORLwW5UpDVUD0yC4byLPGWInUTLEJTnwAtrTZIMbhoiQjywo6Qy3jn+IekXabwwTUq8lwzg9IVetNFXKLflCoU+h2oKNwRU1Y10IN5IFz4t3zh6aBRoBeyJQArFUB1MTMczTAiOSixhufC2SNZloINAY1CelEoA5dB0cyCGLPaMYLbnsN8bSavd3S36euCU391uUJlTRZnPMcbmMr/ATXSEdlyFAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">5c442294835b12100b30e970deaad3de</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>2b572c12-a9df-4433-b46a-73f766319ed4</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:01</sys_created_on>
+        <sys_id>a4446294835b12100b30e970deaad324</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:46:31</sys_updated_on>
+        <ui_id>935f1ad2-9f25-4958-8dac-0bcb690d8f97</ui_id>
+        <values>H4sIAAAAAAAA/+VVXWviQBT9KzLPEhKjor4tirDQbcEuvnRLmGRu6sBkks6H1RX/+94kkxi0tBb6IutLuF8z5xzPTZ4OhDMyI0NgfjANxkkYhOHA9weTYRCPwzgYsJACBKRPJM0AOxUkuWIYb6mwZeJwmCugBlgUeIlVCqQ5HrHOuC4E3a9dG2aSDRcM62T29NwnBVV4ogFFZoez0rWQBI1BYOuqwXSO0eyLMmZ5YjPEFfEmeecmF67S+7nACg6VcAK/T2BnQDJAICkVGvoko5JRk6s9mRllMYGk2YMU+7Zjw6WpiWZ0p/lfvHnol30pILPEidCGkROoTqcLaugjnpwYq1q9cp6ArjVhkFIrzLybqxseCsNzWY8YGotmOhc2k/e1IqQ9oPN/WI0goCh5lshrWunjJn9bNSCXXFaSOIoiT6hoI2qM4rE1JZwDAQGVxhktCi5fokLlW14NI5TMexEYeKnI3/BOzV+kR5MSt4eqUm+J+UWVXlPFSxK/8BgcPvaJ3uu5oFqfqKCG0astkdTEHIWoUqGSIKqcUA4nihfmB161BQf82Hemj0cfOSyZngzVOfNk/F0UjKZhMA0jxGMlOz1eLWgDlzuwqhp6q1PD11biCsDNSvyujPA+AbcVF7m77mzvvi64nRh9205MbmknHI2bX4rPVsEffPiy7Tipcr/urIE2+PL/Y30/ZJNLy59Vv+b3K1A1fl9yEEy/A7MxO2QIy0BUwz4zvCv21q7Yfgi+zfXB2K9+N+T9/+Z78PwPPqAqIgYJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">5c442294835b12100b30e970deaad3de</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:01</sys_created_on>
+        <sys_id>a8446294835b12100b30e970deaad321</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:39:01</sys_updated_on>
+        <ui_id>3beca69e-4ab6-49ae-a58c-b213e7e9463d</ui_id>
+        <values>H4sIAAAAAAAA/+VVXWviQBT9KzLPEhKjor4tirDQbcEuvnRLmGRu6sBkks6H1RX/+94kkxi0tBb6IutLuF8z5xzPTZ4OhDMyI0NgfjANxkkYhOHA9weTYRCPwzgYsJACBKRPJM0AOxUkuWIYb6mwZeJwmCugBlgUeIlVCqQ5HrHOuC4E3a9dG2aSDRcM62T29NwnBVV4ogFFZoez0rWQBI1BYOuqwXSO0eyLMmZ5YjPEFfEmeecmF67S+7nACg6VcAK/T2BnQDJAICkVGvoko5JRk6s9mRllMYGk2YMU+7Zjw6WpiWZ0p/lfvHnol30pILPEidCGkROoTqcLaugjnpwYq1q9cp6ArjVhkFIrzLybqxseCsNzWY8YGotmOhc2k/e1IqQ9oPN/WI0goCh5lshrWunjJn9bNSCXXFaSOIoiT6hoI2qM4rE1JZwDAQGVxhktCi5fokLlW14NI5TMexEYeKnI3/BOzV+kR5MSt4eqUm+J+UWVXlPFSxK/8BgcPvaJ3uu5oFqfqKCG0astkdTEHIWoUqGSIKqcUA4nihfmB161BQf82Hemj0cfOSyZngzVOfNk/F0UjKZhMA0jxGMlOz1eLWgDlzuwqhp6q1PD11biCsDNSvyujPA+AbcVF7m77mzvvi64nRh9205MbmknHI2bX4rPVsEffPiy7Tipcr/urIE2+PL/Y30/ZJNLy59Vv+b3K1A1fl9yEEy/A7MxO2QIy0BUwz4zvCv21q7Yfgi+zfXB2K9+N+T9/+Z78PwPPqAqIgYJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">5c442294835b12100b30e970deaad3de</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>35609f6b-daf2-4549-b439-6fb5aa2b9dc3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:01</sys_created_on>
+        <sys_id>ac446294835b12100b30e970deaad323</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:39:01</sys_updated_on>
+        <ui_id>2ade1859-1cb9-497b-ac75-ab1fea60ffaa</ui_id>
+        <values>H4sIAAAAAAAA/+VVXWviQBT9KzLPISRGpfq2KMJCtwW7+NItYZy50YHJR+fD6or/fW+SSQxaWgt9kfUl3K+Zc47nJs8HIjiZkAHwIByHIxaFUdQPgv7dIFyNolXY5xEFCIlHMpoCdipgueIYb6m0ZeJwmCqgBngc+swqBZk5HrHOhS4k3S9dG2bYRkiOdTJ5fvFIQRWeaECRyeGsdC0kSVcgsXXRYDrHaPZFGfOc2RRxxaJJ3rvJmav0fs6wgkMlnDDwCOwMZBwQSEKlBo+kNOPU5GpPJkZZTCBp/pjJfduxEZmpiaZ0p8VfvHkQlH0JIDPmRGjD2AlUp5MZNfQJT2bGqlavXDDQtSYcEmqlmXZzdcNjYUSe1SOGrmQznUubZg+1IqQ9oPN/WI0goCh5lshrWsnTJn9bNCDnIqskcRRlzqhsI2qMEitrSjgHAhIqjVNaFCJbx4XKt6IaRiipv5YY+InM3/BOLdaZT1mJ20dVqT/H/KxKL6kSJYlfeAwOHz2i93oqqdYnKqhh/GpLJDUxRyGuVKgkiCsnlMNMicL8wKu24IAfPWf61fAjh7HxyVCdM0/G38XhcByF4yhGPDbjp8erBW3gcgcWVUNvcWr42kpcAbhZid+VEd4n4LbiInffne091AW3E8Nv24m7W9oJR+Pml+KzVQj6H75sO06q3K87a6ANvvz/2CCI+ODS8mfVr/n9ClSN3+cCJNfvwGzMDinCMhDXsM8M74q9pSu2H4Jvc304CqrfDXn/v/kevPwDBQyLPAYJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=5c442294835b12100b30e970deaad3de"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=5c442294835b12100b30e970deaad3de^sys_idNOT IN28446294835b12100b30e970deaad31f,6c446294835b12100b30e970deaad320,d2f56e18835b12100b30e970deaad34e"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">40a06250835b12100b30e970deaad3d3</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">5c442294835b12100b30e970deaad3de</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:01</sys_created_on>
+        <sys_id>28446294835b12100b30e970deaad31f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:46:31</sys_updated_on>
+        <ui_id>35609f6b-daf2-4549-b439-6fb5aa2b9dc3</ui_id>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJn2ZAly7F9CxwEKJA2QBPk0gbCilzFbClRJak4ruB/71IP26hdtEFz7M2c5S5nRjtww3TtqtrZe31prXwq2fLzY8Bk6TH63bASCmRLxnUppJO6TFsgYM+gal8wWBlNB4KEtJWC7cNpha+lEgb76RUYmuHQsGXzS0kKasxDyCcLPuFxNIujMIzm00k2i7NJJGJAiGmgggwVXV0NtN7dtEjwW75uW3ncOiPLp/5800+5G0BthGc1CQOGLw5LgcQnB2UxYAWUApw22z1iEMRtqQ7AWpaOxjF/+cXKH/RglCT+Yo4kkWNX3B/T3rEOzq/AAVGpuatNf5WvteRoO3ME5lArtzrGugu3lZfatTjI1NCtVV2UHztH2H7A8IEIqS2RwMor9dR7HfndWm8+DSyvZdm60heV5vRNhxM48i6rnefTMFRY0KC0gKoiR1O/ALJtJi7F+EnRYZwrvaFH/baNgXviYzIWxteEX7XwAxjpVXygMdTc0czASp62m0njyCZku4DZrV0psPYgktxNv9eeYie5F5d2/vgWbmTlLunlZ+x17ILTRT/a8aYRFzy5mMf5KJtGYjQNk9kowyQZiUU85bNEzHGBY2LbLnxqHTjc7b7UYRjTbn9F7miRTgLyVmNfl64FJHkyCZPz6ZrOzqXrTK5eGanoD5Hy3/MvExWG4f9I/XOkpE27IPTa2sffMFGPPj7dm3uvubRE7d5j74d/GF/Y0nJJfgxttPnmRR2w3U9cGC0aqwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">88a06250835b12100b30e970deaad3d5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">5c442294835b12100b30e970deaad3de</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>35609f6b-daf2-4549-b439-6fb5aa2b9dc3</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:01</sys_created_on>
+        <sys_id>6c446294835b12100b30e970deaad320</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:46:31</sys_updated_on>
+        <ui_id>2d286ce9-1521-42fb-b25a-3f317f564ac5</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">0ef56e18835b12100b30e970deaad300</block>
+        <comment/>
+        <connected_to>35609f6b-daf2-4549-b439-6fb5aa2b9dc3</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Approvals/reprovalls Manager">5c442294835b12100b30e970deaad3de</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:46:31</sys_created_on>
+        <sys_id>d2f56e18835b12100b30e970deaad34e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:46:31</sys_updated_on>
+        <ui_id>2b572c12-a9df-4433-b46a-73f766319ed4</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=5c442294835b12100b30e970deaad3de"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=5c442294835b12100b30e970deaad3de"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_5c442294835b12100b30e970deaad3de^sys_idNOT IN6c446294835b12100b30e970deaad30b,9c446294835b12100b30e970deaad304"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5c442294835b12100b30e970deaad3de</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:01</sys_created_on>
+        <sys_id>6c446294835b12100b30e970deaad30b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Refund Request" source="x_1593193_refund">59fb2998831712100b30e970deaad378</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:39:01</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5c442294835b12100b30e970deaad3de</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:01</sys_created_on>
+        <sys_id>9c446294835b12100b30e970deaad304</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Refund Request" source="x_1593193_refund">59fb2998831712100b30e970deaad378</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:39:01</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_5c442294835b12100b30e970deaad3de"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_5c442294835b12100b30e970deaad3de"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_5c442294835b12100b30e970deaad3de"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>ad64dedc83d712100b30e970deaad32b</sys_id>
+        <latest_snapshot>5c442294835b12100b30e970deaad3de</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch4-11-22-2024_12-02-2024_1408.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=ad64dedc83d712100b30e970deaad32b^sys_idNOT INe0446294835b12100b30e970deaad338"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"e0446294835b12100b30e970deaad338","name":"plan","plan_signature":null}}</plan>
+        <plan_id>ad64dedc83d712100b30e970deaad32b</plan_id>
+        <snapshot>f036e258835b12100b30e970deaad321</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-20 20:39:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e0446294835b12100b30e970deaad338</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 20:46:32</sys_updated_on>
+        <trigger display_value="">60446294835b12100b30e970deaad336</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=ad64dedc83d712100b30e970deaad32b"/>
+</record_update>

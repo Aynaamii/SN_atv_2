@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="274fa510835712100b30e970deaad377" extends="task" label="Refund Requeste" max_length="40" name="x_1593193_refund_refund_requeste" type="collection">
+        <element label="Expense date" max_length="40" name="expense_date" type="glide_date_time"/>
+        <element label="Requested amount" max_length="38" name="requested_amount" type="currency"/>
+        <element label="Requested amount convert" max_length="38" name="requested_amount_convert" type="currency"/>
+        <element label="Refund type" max_length="32" name="refund_type" reference="x_1593193_refund_type" type="reference"/>
+    </element>
+</database>
