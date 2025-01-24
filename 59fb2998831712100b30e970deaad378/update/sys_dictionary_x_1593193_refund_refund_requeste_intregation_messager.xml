@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="requested_amount_convert" table="x_1593193_refund_refund_requeste">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="intregation_messager" table="x_1593193_refund_refund_requeste">
         <active>true</active>
         <array>false</array>
         <attributes/>
@@ -13,7 +13,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Requested amount convert USD</column_label>
+        <column_label>Intregation Erro Messager</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -26,15 +26,15 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>requested_amount_convert</element>
+        <element>intregation_messager</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Currency">currency</internal_type>
+        <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
-        <max_length>38</max_length>
+        <max_length>250</max_length>
         <name>x_1593193_refund_refund_requeste</name>
         <next_element/>
         <primary>false</primary>
@@ -51,14 +51,14 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-01-20 16:52:01</sys_created_on>
-        <sys_name>Requested amount convert USD</sys_name>
+        <sys_created_on>2025-01-24 01:16:59</sys_created_on>
+        <sys_name>Intregation Erro Messager</sys_name>
         <sys_package display_value="Refund Request" source="x_1593193_refund">59fb2998831712100b30e970deaad378</sys_package>
         <sys_policy/>
         <sys_scope display_value="Refund Request">59fb2998831712100b30e970deaad378</sys_scope>
-        <sys_update_name>sys_dictionary_x_1593193_refund_refund_requeste_requested_amount_convert</sys_update_name>
+        <sys_update_name>sys_dictionary_x_1593193_refund_refund_requeste_intregation_messager</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-24 01:42:46</sys_updated_on>
+        <sys_updated_on>2025-01-24 01:39:10</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
